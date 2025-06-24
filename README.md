@@ -1,4 +1,4 @@
-# Projeto de API REST com Javalin - Sistema de Tarefas
+# Projeto de API REST com Javalin - Sistema de Gerenciamento de Tarefas
 
 Este projeto é uma avaliação de Desenvolvimento de Serviços Web e Testes com Java. Consiste em uma API REST para gerenciamento de tarefas, construída com o framework Javalin.
 
