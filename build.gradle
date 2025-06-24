@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.empresa'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = '23'
+targetCompatibility = '23'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // lib principal pra rodar o Javalin, necessário para criar a API REST
+    implementation 'io.javalin:javalin:6.1.3'
+
+    // JUnit 5 pra escrever os testes automatizados do código
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'io.javalin:javalin-testtools:6.1.3'
+
+    // lib pra mostrar os logs no console (tipo quando o servidor inicia, erros, etc)
+    implementation 'org.slf4j:slf4j-simple:2.0.10'
+
+    // lib pra converter os objetos Java em JSON e vice-versa (o Javalin usa isso nos endpoints que mandam JSON)
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    testImplementation 'org.assertj:assertj-core:3.25.3'
+}
+
+application {
+    mainClass = 'com.empresa.App'
+}
+
+test {
+    useJUnitPlatform()
+}
